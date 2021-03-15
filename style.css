@@ -1,0 +1,2066 @@
+    /*
+Theme Name: Fé Template
+Text Domain: fetemplate
+Version: 1.0
+Requires at least: 4.7
+Requires PHP: 7.0
+Description: Theme creado por el P+K para el cliente y su integración al sitio 
+Tags: site
+Author: P + K
+Author URI: https://possumus.tech/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+    /*Colores institucionales*/
+    
+     :root {
+        --principal: #606eb2;
+        --blue: #5698da;
+        --white: #fff;
+        --green: #6fb353;
+        --black: #000000;
+        --grab: #eff2f5;
+        --ash: rgba(151, 151, 151, 0.5);
+        --text: #63666a;
+        --text-weDo: #666666;
+        --number-weDo: #606060;
+        --formatPacking: #b0b0b0;
+        --btn: #606eb2;
+        /*****Cajas*/
+        --radio-cajas: 10px;
+        --sombra-cajas: 0 8px 20px 0 rgba(0, 0, 0, 0.11);
+    
+        --sombra-botones: 0 8px 20px 0 rgba(0, 0, 0, 0.11);
+    }
+    
+html {
+  scroll-behavior: smooth;
+}
+    
+    h1.title-general {
+        font-size: 50px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        color: #63666a;
+        font-family: mullerextrabold;
+    }
+    
+    .btn-movile,
+    #mapa-mobile {
+        display: none;
+    }
+    
+    a.btn {
+        text-transform: uppercase;
+    }
+    /*Predefinidos*/
+    
+    .background-blue {
+        background-color: var(--principal);
+    }
+
+    .page-template-divisionEnvasados-es .background-blue  {
+        background-color: var(--blue);
+    }
+    
+    .background-white {
+        background-color: var(--white);
+    }
+    
+    .background-green {
+        background-color: var(--green);
+    }
+    
+    .text-color {
+        color: var(--text);
+    }
+    
+    .text-green {
+        color: var(--green);
+    }
+    
+    .text-blue {
+        color: var(--blue);
+    }
+    
+    .color-textBackground {
+        background-color: var(--grab);
+    }
+    
+    .color-black {
+        color: var(--black);
+    }
+    
+    .color-weDo {
+        color: var(--text-weDo);
+    }
+    
+    .background-grey {
+        background-color: var(--formatPacking);
+    }
+    /*Font*/
+    
+    @font-face {
+        font-family: 'mullerbold';
+        src: url('/wp-content/themes/fenix/fonts/muller_bold.woff2') format('woff2'), url('/wp-content/themes/fenix/fonts/muller_bold.ttf') format('ttf'), url('/wp-content/themes/fenix/fonts/muller_bold.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'mullerextrabold';
+        src: url('/wp-content/themes/fenix/fonts/muller_extrabold.woff2') format('woff2'), url('/wp-content/themes/fenix/fonts/muller_bold.ttf') format('ttf'), url('/wp-content/themes/fenix/fonts/muller_extrabold.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'mullerlight';
+        src: url('/wp-content/themes/fenix/fonts/muller_light.woff2') format('woff2'), url('/wp-content/themes/fenix/fonts/muller_bold.ttf') format('ttf'), url('/wp-content/themes/fenix/fonts/muller_light.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'muller';
+        src: url('/wp-content/themes/fenix/fonts/muller_regular.woff2') format('woff2'), url('/wp-content/themes/fenix/fonts/muller_bold.ttf') format('ttf'), url('/wp-content/themes/fenix/fonts/muller_regular.woff') format('woff');
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+    
+    a.btn {
+        font-family: 'Open Sans'!important;
+        border-radius: 8px!important;
+        padding: 12px 30px;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--green);
+        box-shadow: var(--sombra-botones)!important;
+    }
+    
+    /*Medias*/
+    
+    @media(max-width: 640px) {
+        /*error 404*/
+        .img-error {
+            width: 100%;
+        }
+        /*Fin error 404*/
+        /*landing envasados*/
+        .image-footer {
+            padding-top: 50px;
+            padding-bottom: 35px;
+        }
+        .footer-legal {
+            font-size: 10px;
+        }
+        .text-footer {
+            font-size: 11px;
+        }
+        .footer-legal {
+            text-align: center;
+        }
+        #custom_html-2 {
+            padding-top: 1em;
+        }
+        #custom_html-3 {
+            padding-top: 1.5em;
+        }
+        .row-textPresentationProduct {
+            padding-top: 90px !important;
+        }
+        .title-presentationService {
+            font-size: 32px;
+        }
+        .color-white.subtitle-presentacionService {
+            font-size: 19px;
+        }
+        .ask-weAre {
+            font-size: 15px;
+        }
+        .nameCompany-weAre {
+            font-size: 32px !important;
+        }
+        .historyCompany-weAre {
+            font-size: 15px;
+        }
+        .text-tecnologyCompany.color-black {
+            padding: 15px 31px;
+        }
+        .col-textFactory {
+            padding-top: 75px;
+        }
+        .subtitle-ourFactory {
+            font-size: 15px;
+        }
+        .title-ourFactory {
+            font-size: 32px;
+        }
+        .text-black.text-ourFactory {
+            font-size: 15px;
+            padding-bottom: 15px;
+        }
+        .subtitle-weDo {
+            padding-top: 70px;
+        }
+        .imgProcedingWeDo {
+            width: 100%;
+        }
+        .padding-weDo {
+            padding-bottom: 45px;
+        }
+        .title-numberWeDo {
+            font-size: 17px;
+        }
+        .number-weDo {
+            font-size: 13px;
+        }
+        .image-productNumber {
+            padding-bottom: 45px;
+        }
+        #different-packaging {
+            padding-top: 78px;
+        }
+        .packingImageRow {
+            padding-top: 32px;
+            padding-bottom: 65px;
+        }
+        .subtitle-formulaciones {
+            font-size: 15px;
+        }
+        .row-formulations {
+            padding-top: 80px;
+        }
+        .subtitle-experience,
+        .title-experience {
+            text-align: center !important;
+        }
+        .row-experience {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .subtitle-experience {
+            font-size: 14px;
+        }
+        .title-experience {
+            font-size: 24px;
+        }
+        .title-client {
+            padding-top: 50px;
+            padding-bottom: 68px;
+            font-size: 32px;
+        }
+        .title-origin {
+            font-size: 32px;
+        }
+        .container-origin {
+            padding-top: 100px;
+            padding-bottom: 93px;
+        }
+        .title-origin {
+            text-align: center;
+        }
+        .title-originNatural {
+            font-size: 32px;
+        }
+        .text-originNatural {
+            padding-top: 184px;
+            padding-bottom: 70px;
+        }
+        .image-originNatural {
+            padding-bottom: 126px;
+        }
+        .img-origin {
+            width: 100%;
+        }
+        .img-feGroup {
+            width: 65%;
+        }
+        .subtitle-slogan {
+            font-size: 22px;
+        }
+        .subtitle-ubicationCompany {
+            font-size: 22px;
+        }
+        .content-companyLogo {
+            padding-top: 135px;
+            padding-bottom: 100px;
+        }
+        .back-texto {
+            width: 54% !important;
+            font-size: 0.7em !important;
+            padding: 7px 2px 6px 7px !important;
+        }
+        .small-circle {
+            width: 15px !important;
+            height: 15px !important;
+            margin: 0px 2px 0px 0px !important;
+        }
+        .fondo-circulos {
+            font-size: 0.8em !important;
+            padding: 8px 10px 4px 10px !important;
+            line-height: 1.4 !important;
+        }
+        /*Fin landing envasados*/
+        /*Home*/
+        .title-welcome {
+            font-size: 40px;
+        }
+        /*Fin Home*/
+        /*Tecnología*/
+        .title-tecnologiaPura {
+            font-size: 32px !important;
+        }
+        p.text-tecnologiaPura {
+            padding-bottom: 30px !important;
+        }
+    }
+    
+    @media(min-width: 641px) and (max-width: 991px) {
+        .styleLineHeader {
+            padding-left: 30px;
+        }
+        .title-presentationService {
+            font-size: 44px;
+        }
+        .subtitle-presentacionService {
+            font-size: 21px;
+        }
+        .ask-weAre.text-color {
+            font-size: 21px;
+        }
+        .nameCompany-weAre {
+            font-size: 40px;
+        }
+        .subtitle-ourFactory {
+            font-size: 21px;
+        }
+        .title-weDo {
+            font-size: 40px;
+            text-align: left;
+        }
+        .text-weDo {
+            text-align: left;
+        }
+        .image-productNumber {
+            padding-bottom: 150px;
+        }
+        .title-flavors {
+            font-size: 21px;
+        }
+        .subtitle-formulaciones {
+            font-size: 21px;
+        }
+        .title-formulaciones {
+            font-size: 40px;
+        }
+        .subtitle-experience {
+            font-size: 21px;
+        }
+        .title-client {
+            font-size: 40px;
+        }
+        .title-origin {
+            font-size: 40px;
+        }
+        /*landing envasados*/
+        .row-textPresentationProduct {
+            padding-top: 120px;
+            padding-bottom: 100px;
+        }
+        .text-packing {
+            text-align: center;
+        }
+        .image-footer {
+            padding-top: 60px;
+            padding-bottom: 45px;
+        }
+        .footer-legal {
+            font-size: 12px;
+        }
+        .text-footer {
+            font-size: 11px;
+        }
+        img.img-origin.img-global {
+            padding-top: 5rem !important;
+        }
+        section#weAre {
+            padding-bottom: 5rem;
+            padding-top: 135px;
+        }
+        #ourFactory {
+            text-align: center;
+        }
+        section#ourFactory {
+            padding-top: 5rem;
+        }
+        p.text-black.text-ourFactory {
+            padding-bottom: 5rem;
+        }
+        .text-tecnologyCompany.color-black {
+            padding: 15px 31px;
+        }
+        section#different-packaging {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .subtitle-weDo {
+            padding-top: 70px;
+            font-size: 40px;
+            text-align: left;
+        }
+        .padding-weDo {
+            padding-bottom: 45px;
+        }
+        .title-numberWeDo {
+            font-size: 17px;
+        }
+        .number-weDo {
+            font-size: 15px;
+        }
+        .imgProcedingWeDo {
+            width: 100%;
+        }
+        .title-numberWeDo {
+            font-size: 21px;
+        }
+        .number-weDo {
+            font-size: 19px;
+        }
+        .row-formulations {
+            padding-top: 120px;
+        }
+        .subtitle-experience,
+        .title-experience {
+            text-align: left;
+        }
+        .subtitle-origenNatural {
+            text-align: center !important;
+            font-size: 24px;
+        }
+        .row-experience {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .subtitle-experience {
+            font-size: 14px;
+        }
+        .title-experience {
+            font-size: 24px;
+        }
+        .title-client {
+            padding-top: 50px;
+            padding-bottom: 68px;
+            font-size: 35px;
+        }
+        .title-origin {
+            font-size: 35px;
+        }
+        .container-origin {
+            padding-top: 100px;
+            padding-bottom: 93px;
+        }
+        .title-originNatural {
+            font-size: 50px;
+        }
+        .text-originNatural {
+            padding-top: 184px;
+            padding-bottom: 70px;
+        }
+        .image-originNatural {
+            padding-bottom: 136px;
+        }
+        .img-origin {
+            width: 100%;
+        }
+        .subtitle-slogan,
+        .subtitle-ubicationCompany {
+            font-size: 40px;
+        }
+        .content-companyLogo {
+            padding-top: 135px;
+            padding-bottom: 100px;
+        }
+        .standar-packing {
+            width: 100% !important;
+        }
+        .transparent-packing {
+            width: 185px !important;
+        }
+        .recyclable-packing {
+            width: 153px !important;
+        }
+        .back-texto {
+            font-size: 0.9em !important;
+            padding: 8px 10px 8px 21px !important;
+        }
+        .textFormatPackingStandar,
+        .textFormatPackingTransparent,
+        .textFormatPackingrecyclable {
+            font-size: 0.9em !important;
+        }
+        .title-origin {
+            text-align: center;
+        }
+        .row-certificate {
+            padding: 100px 0px;
+        }
+        p.text-origin {
+            text-align: center;
+        }
+        /*Fin landing envasados*/
+        /*Home*/
+        .title-welcome {
+            font-size: 40px;
+        }
+        /*Fin home*/
+    }
+    
+    @media(min-width: 992px) {
+        .wrapper-idioma {
+            padding-left: 2em;
+        }
+        .styleLineHeader {
+            padding-left: 15px;
+        }
+        /*landing envasados*/
+        .image-footer {
+            padding-top: 110px;
+            padding-bottom: 95px;
+        }
+        .text-footer {
+            font-size: 14px;
+        }
+        .create-logo {
+            text-align: right;
+        }
+        .title-presentationService {
+            font-size: 60px;
+        }
+        .color-white.subtitle-presentacionService {
+            font-size: 25px;
+        }
+        #weAre {
+            padding-top: 166px;
+            padding-bottom: 125px;
+        }
+        .text-tecnologyCompany {
+            padding: 53px 25px;
+        }
+        #ourFactory {
+            padding-top: 160px;
+        }
+        .col-textFactory {
+            text-align: center;
+        }
+        .col-textWeDo {
+            padding-top: 135px;
+        }
+        .title-ourFactory {
+            font-size: 50px;
+        }
+        .text-ourFactory {
+            padding-bottom: 85px;
+        }
+        .title-weDo {
+            font-size: 50px;
+        }
+        .image-productNumber {
+            padding-bottom: 170px;
+        }
+        .padding-weDo {
+            padding-bottom: 120px;
+        }
+        .title-numberWeDo {
+            font-size: 21px;
+        }
+        .number-weDo {
+            font-size: 19px;
+        }
+        #different-packaging {
+            padding-top: 200px;
+        }
+        .packingImageRow {
+            padding-top: 82px;
+            padding-bottom: 200px;
+        }
+        .text-packing {
+            text-align: center;
+        }
+        #different-packaging .title-ourFactory {
+            padding-bottom: 3rem;
+        }
+        .row-formulations {
+            padding-top: 200px;
+        }
+        .subtitle-formulaciones {
+            font-size: 24px;
+        }
+        .col-textFormulations {
+            padding-top: 6em;
+        }
+        .text-Formulations {
+            width: 80%;
+        }
+        .row-certificate {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .row-experience {
+            padding-top: 200px;
+            padding-bottom: 150px;
+        }
+        .subtitle-experience {
+            font-size: 24px;
+        }
+        .title-experience {
+            font-size: 40px;
+        }
+        .title-client {
+            padding-top: 82px;
+            padding-bottom: 124px;
+            font-size: 50px;
+        }
+        .container-client {
+            padding-bottom: 126px;
+        }
+        .title-origin {
+            font-size: 40px;
+        }
+        .container-origin {
+            padding-top: 187px;
+            padding-bottom: 87px;
+        }
+        .content-origin {
+            text-align: center;
+        }
+        .title-originNatural {
+            font-size: 50px;
+        }
+        .text-originNatural {
+            padding-top: 195px;
+            padding-bottom: 235px;
+        }
+        .image-originNatural {
+            padding-bottom: 160px;
+        }
+        .subtitle-slogan {
+            font-size: 40px;
+        }
+        .subtitle-ubicationCompany {
+            font-size: 40px;
+        }
+        .content-companyLogo {
+            padding-top: 221px;
+            padding-bottom: 267px;
+        }
+        #custom_html-3 {
+            padding-top: 0.5em;
+        }
+        .row-textPresentationProduct {
+            padding-top: 250px;
+        }
+        .nameCompany-weAre {
+            padding-bottom: 40px;
+        }
+        .subtitle-weDo {
+            line-height: 2.29;
+        }
+        /*fin landing envasados*/
+        /*Home*/
+        .title-welcome {
+            font-size: 62px;
+        }
+        .title-welcome {
+            padding-top: 1.5rem;
+        }
+        /*Fin home*/
+    }
+    
+    @media(max-width: 767px) {
+        /*Esconde mapa en movile*/
+        div#animation_container {
+            display: none;
+        }
+        /**home*/
+        .col-media {
+            width: 50% !important;
+            float: left !important;
+            flex: 0 0 50%;
+            margin-top: 35px;
+        }
+        #quienes {
+            padding: 15px;
+            margin-bottom: 80px !important;
+        }
+        .col-hacemos {
+            padding: 0 15px !important;
+        }
+        .btn-desktop {
+            display: none !important
+        }
+        .btn-movile {
+            display: block;
+            width: 100%;
+        }
+        section#hacemos {
+            margin-bottom: 80px !important;
+        }
+        #cultivos {
+            padding: 100px 0 40px 0 !important;
+        }
+        .card {
+            flex: 0 0 60% !important;
+            margin: 0 auto 60px auto !important;
+        }
+        .todoscert {
+            margin: 0px 0 100px 0 !important;
+        }
+        #tecnologia {
+            padding: 0px 0px 110px 0px !important;
+        }
+        #tecnologia .col-12.col-md-4.col-md-offset-3 {
+            padding: 0 35px !important;
+        }
+        h1.title-general {
+            font-size: 32px;
+            margin: 50px 0 30px 0;
+        }
+        section#estandares {
+            padding: 0 15px;
+        }
+        #mapa-mobile {
+            display: block;
+        }
+        #fichas .slick-initialized .slick-slide {
+            padding: 20px 0 0px 0;
+        }
+    }
+    /*Menú burguer*/
+    
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1100;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 24px;
+        color: var(--text);
+        display: block;
+        transition: 0.3s;
+        font-weight: 500;
+    }
+    
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #7EE1D6;
+    }
+    
+    .overlay .closebtn {
+        position: relative;
+        top: -4px;
+        font-size: 37px;
+        text-align: right !important;
+        padding: 0px 12px 0px 0px !important;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .overlay a {
+            font-size: 20px
+        }
+        .overlay .closebtn {
+            font-size: 40px;
+            top: -10px;
+            right: 35px;
+        }
+    }
+   /***Ajustes para cambiar logo en menu sticky*/
+   .line-header .col-lg-2 {  
+   flex: 0 0 25%;
+    max-width: 25%;
+    }
+
+
+    .line-header .col-lg-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+
+    .line-header select#lang_choice_1 {
+        position: relative;
+        left: 30px;
+        z-index: 99999;
+    }
+    
+    img.logoBig {
+        width: 120%;
+        margin: 0 0 0px 10px;
+    }
+
+    button.btn.btn-hablamos.text-uppercase.hvr-grow-shadow {
+        margin-left: 40px;
+    }
+
+    
+
+    img#logo-header {
+        width: 120%;
+        margin: 0 0 0 10%;
+    }
+    /*
+    .logoSticky {
+        display:none
+    }
+
+    .fixed-top .logoBig {
+        display:none
+    }
+
+    .fixed-top .logoSticky {
+        display:block
+    }
+
+    .fixed-top .logoSticky {
+        display: block;
+        width: 80%;
+        margin: 15px;
+    }
+*/
+
+@media (min-width: 992px) {
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 1024px!important;
+}
+}
+    @media screen and (max-width: 992px) { 
+
+        
+        .line-header .col-lg-2 {
+            -ms-flex: 0 0 16.666667%;
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+        }
+    
+        .line-header .col-12 {
+            flex: 0 0 100%!important;
+            max-width: 100%!important;
+        }
+
+        img#logo-header {
+            width: 70% !important;
+            margin: 0 0 0 10%;
+        }
+
+        }
+        
+
+   
+ /* --- Clase que agregaremos cuando el usuario haga scroll --- */
+    .menu-fixed {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        width: 100%;
+    }
+    /*Fin menu*/
+    /*menu*/
+    
+    #menuMobile .sub-menu,
+    #menuDesktop .sub-menu {
+        position: relative;
+    }
+    
+    #menuMobile li,
+    #menuDesktop li {
+        list-style: none;
+    }
+    
+    #menuMobile a,
+    #menuDesktop a {
+        color: #63666a;
+        text-align: left;
+        padding: 12px 32px;
+    }
+    
+    #menuMobile .btn-hablamos,
+    #menuDesktop .btn-hablamos {
+        float: left;
+        margin-top: 12px;
+    }
+    
+    #navmenu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        list-style-image: none;
+    }
+    
+    #navmenu li {
+        display: inline;
+        float: left;
+        padding: 30px 15px;
+    }
+    
+    .dropdown:hover .sub-menu {
+        display: block;
+    }
+    
+    .sub-menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    
+    .sub-menu a {
+        color: #000 !important;
+    }
+    
+    #navmenu>.menu-item-has-children>a::after,
+    #menuMobile>.menu-item-has-children>a::after,
+    .navbar-nav>.menu-item-has-children>a::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        padding-left: 5px;
+        font-size: 12px;
+    }
+    
+    #navmenu>.menu-item-has-children:hover>a::after,
+    #menuMobile>.menu-item-has-children:hover>a::after,
+    .navbar-nav>.menu-item-has-children:hover>a::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f106";
+        padding-left: 5px;
+        font-size: 12px !important;
+    }
+    
+    .menu-item a {
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Open Sans';
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .fixed-top .menu-item a {
+        color: #63666a !important;
+    }
+
+    #container-header {
+        transition: 0.5 all
+    }
+    .fixed-top {
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+        height: 60px;
+        transition: 0.5s all;
+    }
+
+    .page-template-divisionEnvasados-es .fixed-top img {
+        width: 70%;
+    }
+
+    .page-template-divisionEnvasados-es .fixed-top .fixed-action-btn.pt-2 {
+        position: relative;
+        bottom: 15px;
+    }
+    
+
+    .fixed-top img#logo-header {
+        width: 90%;
+        margin: 0 0 0 10%;
+    }
+    
+    .fixed-top .logo.background-blue {
+        height: 60px;
+        transition:  0.5s all;
+    }
+    
+    .fixed-top hr.styleLineHeader {
+        margin: 0;
+    }
+    
+    .fixed-top button.btn.btn-hablamos.text-uppercase.hvr-grow-shadow {
+        position: relative;
+        bottom: 18px;
+    }
+    
+    .fixed-top div#navmenu {
+        position: relative;
+        bottom: 10px;
+    }
+
+    .fixed-top select#lang_choice_1 {
+        margin-top: 1.2em;
+    }
+    /*----------------------- Preloader -----------------------*/
+    
+    body.preloader-site {
+        overflow: hidden;
+    }
+    
+    .preloader-wrapper {
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999999;
+    }
+    
+    .preloader-wrapper .preloader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 120px;
+    }
+    /*----------------------- FIN Preloader -----------------------*/
+    /*Header*/
+    
+    .opacity {
+        background-color: #5698da5c !important;
+    }
+    
+    .navbar-nav {
+        padding-top: 5em;
+    }
+    
+    .line-header {
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+        display: inline-block;
+    }
+    
+    .navbar-nav li {
+        display: inline;
+    }
+    
+    .row-contactHeader {
+        padding-top: 25px;
+    }
+    
+    .btn-hablamos {
+        width: 155px;
+        height: 46px;
+        border-radius: 23px;
+        background-color: #5698da;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.33;
+        font-family: 'Open Sans';
+    }
+    
+    i.icon-menuMobile.fas.fa-bars {
+        color: white;
+    }
+    
+    #openNavDesktop {
+        cursor: pointer;
+        padding: 0;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    .color-white {
+        color: white
+    }
+    
+    select#lang_choice_1 {
+        margin-top: 1.8em;
+        width: 2.7em;
+        text-transform: capitalize;
+        background-color: transparent !important;
+        border-color: transparent !important;
+        color: #fff !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background-image: url('/wp-content/themes/fenix/img/chevron-down-solid.svg');
+        background-position: right center;
+        background-size: 27%;
+        background-repeat: no-repeat;
+        text-transform: uppercase;
+        font-family: 'Open Sans';
+        font-weight: bold;
+    }
+    
+    select#lang_choice_1:focus {
+        border: none !important;
+        outline: 0 !important;
+    }
+    
+    #lang_choice_1 option {
+        color: #000 !important;
+    }
+    /*Estilo para Internet Explorer tome el diseño*/
+    
+    select#lang_choice_1::-ms-expand {
+        display: none;
+    }
+    
+    .btn-hablamos:hover {
+        color: white;
+    }
+    
+    .lineLogo {
+        display: inline-flex;
+    }
+    
+    .styleLineHeader {
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        height: 58px;
+        border-top: none !important;
+    }
+    
+    .height-80 {
+        height: 85px;
+    }
+    /*Fin Header*/
+    /******Footer*/
+    /*Formulario Footer*/
+    
+    #container-form {
+        padding: 170px 0 80px 0px;
+    }
+    
+    #container-form .location-footer {
+        margin-top: 50px;
+    }
+    
+    #container-form .location-footer .col-12 {
+        margin-bottom: 50px;
+    }
+    
+    .row.location-footer {
+        width: 70%;
+        margin: 0 auto;
+    }
+    /*form*/
+    
+    input.wpcf7-form-control:not(.wpcf7-submit),
+    textarea.wpcf7-form-control {
+        border: none;
+        border-bottom: 1px solid #d8d8d8;
+        padding: 15px 0;
+        width: 100%
+    }
+    
+    form.wpcf7-form.init {
+        border-radius: var(--radio-cajas);
+        box-shadow: var(--sombra-cajas);
+        padding: 80px 40px
+    }
+    
+    textarea.wpcf7-form-control {
+        height: 150px;
+    }
+    
+    .wpcf7-submit {
+        border-radius: 8px;
+        background-color: #606eb2;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        width: 50%;
+    }
+    /*Fin Formulario Footer*/
+    
+    .footer-legal {
+        font-family: 'Open Sans';
+        line-height: normal;
+        color: #63666a;
+    }
+    
+    div#container-imageFooter {
+        border-top: 0.1px solid #979797;
+    }
+    
+    div#border-Footer {
+        border-bottom: 0.1px solid #979797;
+    }
+    
+    section.redes-footer {
+        padding-bottom: 70px;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center !important;
+    }
+    
+    .location-footer a {
+        color: #000000;
+    }
+    
+    section.redes-footer {
+        padding-bottom: 70px;
+    }
+    
+    .container-copyright {
+        padding-top: 17px;
+    }
+    
+    .text-footer {
+        font-family: 'Open Sans';
+        line-height: 1.27;
+        color: var(--black);
+    }
+    /*Fin Footer*/
+
+    /*******Mapa*/
+    @media screen and (width: 1024px) {
+        
+    #animation_container, #canvas {
+        width: 1024px!important;
+        height: 427px!important;
+    }
+
+    button.btn.btn-hablamos.text-uppercase.hvr-grow-shadow {
+        margin-left: -50px!important;
+    }
+
+    #franja-bienvenidos .container {
+       
+        width: 90%;
+    }
+    img.w-40.pb-4.logo-25 {
+        margin: 0!important;
+        position: relative;
+        right: -80%;
+        bottom: 190%;
+    }
+
+    } 
+
+    @media screen and (width: 1920px) {
+        
+        img.w-40.pb-4.logo-25 {
+            margin: 40px 0 0 -20%!important;
+        }
+    
+        } 
+
+    @media screen and (width: 1280px) {
+        
+        #animation_container, #canvas {
+            width: 1280px!important;
+            height: 533px!important;
+        }
+    
+        
+        } 
+
+    /*Fin Mapa*/
+    /*Landing división envasados*/
+    
+    .padding-cer1,
+    .padding-car2 {
+        padding-top: 5em;
+    }
+    
+    #contentHeader {
+        background-image: url('/wp-content/uploads/fondo-productBanner-min.jpg');
+        /* fallback */
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url('/wp-content/uploads/fondo-productBanner-min.jpg');
+        background-size: cover;
+        margin-top: -100px;
+    }
+    
+    #origin-natural {
+        background-image: url('/wp-content/uploads/IMG-naturaleza.jpg');
+        background-size: cover;
+    }
+    
+    .title-presentationService {
+        font-family: mullerbold;
+        line-height: 0.97;
+        letter-spacing: -2px;
+        padding-bottom: 25px;
+    }
+    
+    .section-productPresentation {
+        padding-top: 75px;
+    }
+    
+    .color-white.subtitle-presentacionService {
+        font-family: Muller;
+        line-height: 1.12;
+        letter-spacing: -0.5px;
+        padding-bottom: 40px;
+    }
+    
+    .btn-viewProduct {
+        border-radius: 8px;
+        font-family: 'Open Sans';
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: normal;
+        padding: 15px 30px;
+    }
+    
+    .img-weAre {
+        width: 50%;
+    }
+    
+    .ask-weAre {
+        font-family: mullerlight;
+        font-stretch: normal;
+        line-height: 2.29;
+    }
+    
+    .nameCompany-weAre {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 0.92;
+        letter-spacing: -1px;
+    }
+    
+    .historyCompany-weAre {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    
+    .parallax {
+        height: 400px;
+        background-image: url(/wp-content/uploads/maquinas-company-min.png);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+    
+    .text-tecnologyCompany {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    
+    .subtitle-ourFactory {
+        font-family: mullerlight;
+        line-height: 2.29;
+    }
+    
+    .title-ourFactory {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 0.92;
+        letter-spacing: -1px;
+    }
+    
+    .text-ourFactory {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    
+    .imageParalax-ourFactory {
+        height: 520px;
+        background-image: url(/wp-content/uploads/factory-image-min.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+    
+    .subtitle-weDo {
+        font-family: mullerlight;
+    }
+    
+    .borderText-weDo {
+        border-bottom: 1px solid;
+        padding-bottom: 1em;
+        font-family: 'Open Sans';
+    }
+    
+    .title-weDo {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+    
+    .border-grayTop {
+        border-top: 1px solid var(--ash);
+    }
+    
+    .border-grayBottom {
+        border-bottom: 1px solid var(--ash);
+    }
+    
+    .sectionText-weDo {
+        padding: 15px 0px;
+    }
+    
+    .number-weDo {
+        font-family: Muller;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--number-weDo);
+        margin-bottom: 4px;
+    }
+    
+    .title-numberWeDo {
+        font-family: mullerextrabold;
+        font-weight: bold;
+        line-height: 1.05;
+        letter-spacing: -0.5px;
+    }
+    
+    .standar-packing {
+        width: 254px;
+        border-radius: 7px;
+    }
+    
+    .textFormatPackingStandar,
+    .textFormatPackingTransparent,
+    .textFormatPackingrecyclable {
+        font-family: Muller;
+        font-size: 19px;
+        line-height: normal;
+        letter-spacing: -0.38px;
+        padding: 8px 29px;
+    }
+    
+    .transparent-packing {
+        width: 208px;
+        border-radius: 7px;
+    }
+    
+    .recyclable-packing {
+        width: 177px;
+        border-radius: 7px;
+    }
+    
+    #flavors-product {
+        background-color: var(--grab);
+    }
+    
+    .title-flavors {
+        font-family: mullerlight;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 2.29;
+        color: var(--text);
+        padding-top: 55px;
+        padding-bottom: 32px;
+    }
+    
+    .img-flavors {
+        padding-bottom: 50px;
+    }
+    
+    .img-radiusFlavors {
+        border-radius: 100%;
+        box-shadow: var(--sombra-cajas);
+    }
+    
+    .name-flavors {
+        font-family: 'mullerbold';
+        font-weight: 800;
+        line-height: 0.92;
+        letter-spacing: -1px;
+        color: var(--text);
+        font-size: 24px;
+    }
+    
+    .row-flavors {
+        padding-bottom: 135px;
+    }
+    
+    .slick-list.draggable {
+        padding-bottom: 94px;
+    }
+    
+    .img-slider {
+        display: block;
+        margin: auto;
+    }
+    
+    .subtitle-formulaciones {
+        font-family: mullerlight;
+        font-weight: 300;
+        line-height: 2.29;
+        color: var(--text);
+    }
+    
+    .title-formulaciones {
+        font-family: mullerextrabold;
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: var(--text);
+        padding-bottom: 56px;
+    }
+    
+    .text-Formulations {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    
+    .border-tag {
+        padding: 9px 20px;
+        border-radius: 7px;
+        border: solid 1px #000000;
+        font-family: Muller;
+        font-size: 1em;
+        letter-spacing: -0.4px;
+        color: #000000;
+    }
+    
+    #formulations {
+        padding-bottom: 100px;
+    }
+    
+    #certificate {
+        background-color: var(--green);
+    }
+    
+    .slick-list.draggable {
+        padding-bottom: 25px !important;
+    }
+    
+    .subtitle-experience {
+        font-family: mullerlight;
+        line-height: 2.29;
+        color: var(--text);
+    }
+    
+    .title-experience {
+        font-family: mullerextrabold;
+        font-weight: 100;
+        line-height: 1.13;
+        letter-spacing: -0.8px;
+        color: var(--text);
+    }
+    
+    .text-client {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    
+    .title-client {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: var(--text-weDo);
+    }
+    
+    .title-origin {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 1.13;
+        letter-spacing: -0.8px;
+        color: var(--text);
+    }
+    
+    .title-originNatural {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+    }
+    
+    .img-global {
+        padding-top: 4rem;
+    }
+    
+    .subtitle-slogan {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 0.9;
+        letter-spacing: -0.5px;
+    }
+    
+    .subtitle-ubicationCompany {
+        font-family: mullerextrabold;
+        font-weight: 800;
+        line-height: 0.9;
+        letter-spacing: -0.5px;
+    }
+    
+    .capacidad-text {
+        width: auto !important;
+    }
+    
+    #companyLogo .line {
+        border-bottom: 1px solid var(--blue);
+    }
+    
+    .small-circle {
+        width: 18px;
+        height: 18px;
+        margin: 0px 5px 0px 0px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    
+    .circle-rojo {
+        background-color: #da0100;
+    }
+    
+    .circle-naranja {
+        background-color: #de912f;
+    }
+    
+    .circle-verde {
+        background-color: #6fb353;
+    }
+    
+    .circle-magenta {
+        background-color: #da00f9;
+    }
+    
+    .circle-marron {
+        background-color: #b99a6f;
+    }
+    
+    .circle-amarillo {
+        background-color: #ffff3c;
+    }
+    
+    .back-texto {
+        float: left;
+        background-color: #606060;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Muller';
+        padding: 7px 10px 6px 21px;
+        border-radius: 7px 0 0 7px;
+        width: 262px;
+    }
+    
+    .fondo-circulos {
+        background-color: #cacaca;
+        padding: 9px 10px 3px 10px;
+        border-radius: 0px 7px 7px 0px;
+        float: left;
+        font-family: 'Muller';
+        line-height: 1.6;
+    }
+    /*Fin Landing división envasados*/
+    /*Carruseles*/
+    
+    .slick-prev {
+        left: 0px !important;
+        z-index: 999 !important;
+    }
+    
+    .center {
+        padding-top: 1em;
+    }
+    
+    .slick-next {
+        right: 0px !important;
+    }
+    /* Home */
+    
+    .title-welcome {
+        font-family: Muller;
+        line-height: 1;
+        letter-spacing: -1px;
+        color: var(--text);
+        font-weight: 800;
+    }
+    
+    .botones-enlaces {
+        font-size: 15px;
+        padding: 10px 20px;
+        font-weight: 600;
+        margin-top: 20px;
+        background-color: var(--btn);
+        border: none;
+    }
+    /*Img Principal*/
+    
+    .home #contentHeader {
+        background-image: url(/wp-content/uploads/header-home-1440.jpg);
+        background-size: cover;
+        margin-top: -100px;
+        height: 100vh;
+        border-bottom-left-radius: 50% 28%;
+        border-bottom-right-radius: 50% 28%;
+    }
+    
+    img.w-40.pb-4.logo-25 {
+        margin: 40px 0 0 30%;
+    }
+    
+    #franja-bienvenidos .container {
+        padding: 40px !important;
+        margin-top: -150px;
+        background-color: #fff;
+        border-radius: var(--radio-cajas);
+        box-shadow: var(--sombra-cajas);
+        margin-bottom: 65px;
+        color: var(--text);
+    }
+    
+    #franja-bienvenidos h2 {
+        line-height: 22px;
+        font-weight: 900;
+        font-size: 36px;
+    }
+    
+    .title-weAre {
+        padding-bottom: 29px;
+    }
+    
+    .text-hacemos {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    /* #franja-bienvenidos .col-xl-6 {
+    display: flex;
+    align-items: center;
+} */
+    
+    #quienes {
+        margin-bottom: 200px;
+    }
+    
+    .text-quienes {
+        font-family: 'Open Sans';
+        line-height: 1.48;
+    }
+    
+    section#hacemos {
+        margin-bottom: 170px;
+    }
+    
+    .col-hacemos {
+        padding: 0 0 0 15%;
+    }
+    
+    #cultivos {
+        padding: 200px 0;
+        background-image: url(/wp-content/uploads/back-cultivos-1.jpg);
+        background-size: cover;
+        margin-bottom: 125px;
+    }
+    
+    section#estandares {
+        margin-bottom: 50px;
+    }
+    
+    section#fichas {
+        color: var(--text);
+    }
+    
+    .card {
+        border-radius: var(--radio-cajas);
+        box-shadow: var(--sombra-cajas);
+        flex: 0 0 22%;
+        border: 0;
+        padding: 20px
+    }
+    
+    .sep-card {
+        margin: 0 4% 0 0;
+    }
+    
+    .card-padding {
+        padding: 16px 38px;
+    }
+    
+    section#fichas h3 {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Muller;
+    }
+    
+    section#fichas h4 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    .card a {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.33;
+        font-weight: 700;
+        color: var(--textos) !important;
+        border-top: 0.5px solid var(--btn);
+        padding-top: 12px;
+    }
+    
+    .todoscert {
+        margin: 50px 0;
+    }
+    
+    .sombras-queHacemos {
+        border-radius: var(--radio-cajas);
+        box-shadow: var(--sombra-cajas)
+    }
+    
+    .text-sliderQueHacemos {
+        font-family: Muller;
+        font-weight: bold;
+        color: var(--text);
+        padding: 0px 4px;
+    }
+    
+    #cultivos .title-general {
+        font-family: mullerextrabold;
+        color: #fff;
+    }
+    
+    #estandares .title-general {
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+    
+    #estandares .text-estandar {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+    }
+    
+    #tecnologia {
+        background-color: #eff2f5;
+        padding: 60px 0px 110px 0px;
+    }
+    
+    #tecnologia .container-fluid {
+        padding: 0;
+    }
+    
+    section#mercados {
+        text-align: center;
+        padding: 100px 0;
+    }
+    /*Certificaciones*/
+    
+    .section-certificacionesPresentation {
+        background-image: url(/wp-content/uploads/back-certificaciones.jpg);
+        height: 60vh;
+        background-size: cover;
+    }
+    
+    .row-textPresentationCertificaciones {
+        margin: 40vh 0 0 0;
+    }
+    
+    .section-certificacionesPresentation h1 {
+        text-transform: uppercase;
+    }
+    
+    .fichas-estandares {
+        margin: 150px 0 0 0;
+    }
+    
+    .fichas-estandares .card {
+        flex: 0 0 15% !important;
+    }
+    
+    .fichas-estandares .sep-card {
+        margin: 0 2% 0 0;
+    }
+    
+    section#inocuidad {
+        margin: 150px 0 0 0;
+    }
+    
+    section#inocuidad {
+        margin: 150px 0 0 0;
+        background-color: #f7f8fa;
+        padding: 150px 0;
+    }
+    
+    section#inocuidad h2 {
+        margin-bottom: 50px;
+    }
+    /****Productos*/
+    
+    .section-productosPresentation {
+        background-image: url(/wp-content/uploads/back-productos.jpg);
+        height: 60vh;
+        background-size: cover;
+    }
+    
+    #textosProductos {
+        margin: 150px 0 50px 0;
+    }
+    
+    img.img-fluid.img-producto {
+        margin: 80px 0 0 0;
+    }
+    
+    .producto {
+        padding: 15px 0 0 0;
+        border-top: 2px solid #dddddd;
+    }
+    
+    .producto span {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .producto p {
+        font-size: 18px;
+    }
+    
+    .producto a:hover {
+        text-decoration: none
+    }
+    
+    .icono {
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 50%;
+    }
+    
+    #fichasTecnicas h1 {
+        margin-bottom: 50px;
+    }
+    
+    #contentFichas {
+        margin-top: 50px;
+    }
+    /*Se aplica de acuerdo a la seleccion del color*/
+    
+    .durazno {
+        background-color: #f1b754
+    }
+    
+    .ciruela {
+        background-color: #6d1837;
+        padding: 5px 11px;
+    }
+    
+    .pera {
+        background-color: #899f4d;
+        padding: 5px 11px;
+    }
+    
+    .manzana {
+        background-color: #f72e18;
+        padding: 5px 8px;
+    }
+    
+    .membrillo {
+        background-color: #f7e46c;
+        padding: 5px 8px;
+    }
+    
+    .zapallo {
+        background-color: #e98e35
+    }
+    
+    #calendario {
+        background-color: #f7f8fa;
+        padding: 50px 0;
+        margin-top: 150px;
+    }
+    
+    #calendario h1 {
+        margin-bottom: 50px;
+    }
+    /*Tecnología*/
+    
+    #headerPageInterior {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin-top: -100px;
+    }
+    
+    .subtitle-bannerTecnologia {
+        font-family: 'Open Sans';
+        font-weight: 300;
+    }
+    
+    .text-tecnologia {
+        font-family: 'Open Sans';
+        font-size: 19px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: normal;
+        color: #000000;
+    }
+    
+    .spacing-1 {
+        padding-top: 135px;
+    }
+    
+    .spacing-5 {
+        padding-bottom: 150px;
+    }
+    
+    .section-textTecnologia {
+        background-color: #f7f8fa;
+    }
+    
+    .title-tecnologiaPura {
+        font-family: Muller;
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: #63666a;
+    }
+    
+    p.text-tecnologiaPura {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        line-height: 1.75;
+        color: #000000;
+        padding-bottom: 130px;
+    }
+    /*clientes*/
+    
+    .spacing-2 {
+        padding-top: 140px;
+    }
+    
+    .text-client {
+        font-family: 'Open Sans';
+        line-height: 1.75;
+        color: #000000;
+    }
+/*Arreglo de header*/
+    .btn-hablamos {
+        margin-left: 10px !important;
+    }
+    @media (min-width: 992px){
+        .opacity .wrapper-idioma {
+            padding-left: 0.2em;
+        }
+        .lineLogo {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+ 
